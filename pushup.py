@@ -76,12 +76,12 @@ class Pushup:
 
     def receive_email(self, mail_service_handle):
         self.driver.switch_to.window(mail_service_handle)
-        retry_times = 3
+        retry_times = 4
         for i in range(0, retry_times):
             self.logger.info(f"{i}-th time checking email")
             if self.check_email():
                 return True
-            self.wait_for_rendering(4)
+            self.wait_for_rendering(15)
         return False
 
     def referral(self, url):
