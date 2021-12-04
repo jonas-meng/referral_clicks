@@ -21,7 +21,7 @@ class Pushup:
         chrome_options = Options()
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-fullscreen")
+        chrome_options.add_argument("--start-maximized")
         self.driver = webdriver.Chrome(self.driver_path, chrome_options=chrome_options)
 
     def wait_for_rendering(self, seconds=2):
